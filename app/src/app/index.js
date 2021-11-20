@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from './children/image'
+import UserBlock from './children/user_block'
 import LikeButton from './children/like_button'
 import styles from './styles'
 
@@ -11,7 +12,7 @@ const App = (props) => {
         <Image data={data} />
       </div>
       <div style={styles.text}>
-        <p>User block</p>
+        <UserBlock data={data}/>
         <p>Comments block</p>
         <LikeButton />
       </div>
