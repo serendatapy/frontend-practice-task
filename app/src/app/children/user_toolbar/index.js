@@ -15,7 +15,7 @@ const UserToolbar = (props) => {
         </div>
       </div>
       <div>
-      <LikeButton like={data.viewer_has_liked}/>
+      <LikeButton size={"medium"} like={data.viewer_has_liked}/>
       </div>
     </div>
   )
