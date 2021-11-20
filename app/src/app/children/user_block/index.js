@@ -10,10 +10,10 @@ const UserBlock = (props) => {
         <img
           src={data.owner.profile_pic_url}
           style={styles.avatar}
-          alt="user-avatar"//{getCaptionFromEdges(data.edge_media_to_caption)}
+          alt="user-avatar"
         />
       </div>
-      <div>
+      <div style={styles.userblockText}>
         <p style={styles.username}>{data.owner.username}</p>
         <p style={styles.location}>{data.location.name}</p>
       </div>

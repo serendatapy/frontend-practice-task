@@ -25,6 +25,8 @@ export default {
   text: {
     order: '2',
     flex: '1 0 40%',
-    alignSelf: 'flex-start'
+    alignSelf: 'flex-start',
+    boxSizing: 'border-box',
+    padding: '20px'
   }
 }
