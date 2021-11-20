@@ -15,7 +15,7 @@ const App = (props) => {
       <div style={styles.text}>
         <UserBlock data={data}/>
         <CommentsBlock data={data}/>
-        <LikeButton />
+        <LikeButton like={data.viewer_has_liked}/>
       </div>
     </main>
   )

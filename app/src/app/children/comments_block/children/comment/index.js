@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from './styles'
-//import {getCaptionFromEdges} from './helpers'
 
 const Comment = (props) => {
   const {username, userComment} = props
