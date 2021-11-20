@@ -4,14 +4,16 @@ import LikeButton from '../like_button'
 
 const UserToolbar = (props) => {
   const { data } = props
+  let differenceDate = (new Date().getTime()) - (data.taken_at_timestamp*1000)
+  let daysAgo = Math.floor(differenceDate/1000/60/60/24)
   return (
     <div style={styles.toolbar}>
       <div>
         <div style={styles.likes}>
-          6,224 likes
+          {(data.edge_media_preview_like.count).toLocaleString()} likes
         </div>
         <div style={styles.time}>
-          4 days ago
+                {daysAgo} days ago
         </div>
       </div>
       <div>
