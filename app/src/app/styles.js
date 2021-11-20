@@ -27,6 +27,6 @@ export default {
     flex: '1 0 40%',
     alignSelf: 'flex-start',
     boxSizing: 'border-box',
-    padding: '20px'
+    padding: '20px 0px 5px 20px'
   }
 }

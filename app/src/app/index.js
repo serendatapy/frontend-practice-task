@@ -2,8 +2,8 @@ import React from 'react'
 import Image from './children/image'
 import UserBlock from './children/user_block'
 import CommentsBlock from './children/comments_block'
-import LikeButton from './children/like_button'
 import styles from './styles'
+import UserToolbar from './children/user_toolbar'
 
 const App = (props) => {
   const { data } = props
@@ -15,7 +15,7 @@ const App = (props) => {
       <div style={styles.text}>
         <UserBlock data={data}/>
         <CommentsBlock data={data}/>
-        <LikeButton like={data.viewer_has_liked}/>
+        <UserToolbar data={data}/>
       </div>
     </main>
   )
