@@ -1,4 +1,4 @@
-import React, { useEffect, Suspense } from 'react'
+import React, { useEffect, Suspense, useState } from 'react'
 import UserBlock from './children/user_block'
 import styles from './styles'
 import UserToolbar from './children/user_toolbar'
@@ -8,6 +8,22 @@ const Image = React.lazy(() => import('./children/image'))
 
 const App = (props) => {
   const { data } = props
+
+  /**
+   * This part handles the media query, I usually do it on a style sheet though
+   * I couldn't figure out how to do it inline, so I used this function to
+   * give myself some flexibility. I assumed the maximum device size was the mock
+   * provided and adapted styles for mobile.
+   */
+  const mediaMatch = window.matchMedia('(max-width: 934px)');
+  const [matches, setMatches] = useState(mediaMatch.matches);
+
+  useEffect(() => {
+    const handler = e => setMatches(e.matches);
+    mediaMatch.addListener(handler);
+    console.log('Media Query Activated', matches)
+    return () => mediaMatch.removeListener(handler);
+  });
 
   /**
    * Here we might use react helment to deal with a more complex use case
@@ -20,8 +36,8 @@ const App = (props) => {
   });
 
   return (
-    <main style={styles.main}>
-      <div style={styles.image}>
+    <main style={styles.main(matches)}>
+      <div style={styles.image(matches)}>
       <Suspense fallback={<div>Loading...</div>}>
         <Image imageSet={data.display_resources} imageCaption={data.edge_media_to_caption} accessibilityCaption={data.accessibilityCaption} />
       </Suspense>

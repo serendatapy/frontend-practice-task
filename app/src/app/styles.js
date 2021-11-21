@@ -1,31 +1,32 @@
 export default {
-  main: {
+  main: (isMobile) => ({
     backgroundColor: '#fff',
     border: '1px solid #e6e6e6',
     borderBottomRightRadius: '3px',
     borderTopRightRadius: '3px',
+    boxSizing: 'border-box',
     maxWidth: '935px',
-    maxHeight: '750px',
+    maxHeight: isMobile ? '': '450px',
     height: '100vh',
     margin: '0px auto',
-    width: 'calc(100% - 40px)',
+    width: isMobile ? '': 'calc(100% - 40px)',
+    fontSize: isMobile ? '20px': '16px',
 
     display: 'flex',
-    flexDirection: 'row',
-    flexWrap: 'wrap',
+    flexFlow: isMobile ? 'column':'row wrap',
     justifyContent: 'flex-start',
     alignContent: 'stretch',
     alignItems: 'flex-start'
-  },
+  }),
 
-  image: {
+  image: (isMobile) => ({
     order: '1',
-    flex: '1 0 60%',
+    flex: isMobile ? '':'1 0 60%',
     alignSelf: 'stretch',
     boxSizing: 'border-box',
     backgroundColor: '#fafafa',
     display: 'flex'
-  },
+  }),
 
   text: {
     order: '2',

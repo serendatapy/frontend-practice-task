@@ -14,11 +14,11 @@ export default {
   },
   likes: {
     fontWeight: 'bold',
-    fontSize: '12px',
+    fontSize: '0.75em',
     marginBottom: '10px'
   },
   time: {
-    fontSize: '10px',
+    fontSize: '0.625em',
     textTransform: 'uppercase',
     color: '#605C5C'
   }

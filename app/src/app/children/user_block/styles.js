@@ -15,11 +15,11 @@ export default {
   username: {
     margin: '5px 0',
     fontWeight: 'bold',
-    fontSize: '14px'
+    fontSize: '0.875em'
   },
   location: {
     margin: '0px',
     fontWeight: '300',
-    fontSize: '12px'
+    fontSize: '0.75em'
   }
 }
