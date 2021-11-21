@@ -11,17 +11,17 @@
   "display_url": "image.png",
   "display_resources": [
     {
-      "src": "https://scontent-lht6-1.cdninstagram.com/vp/84086243d768e888f955363991b6b60c/5C814F01/t51.2885-15/sh0.08/e35/s640x640/43209300_193808991532182_4392627673419220297_n.jpg",
+      "src": "image_640w.png",
       "config_width": 640,
       "config_height": 426
     },
     {
-      "src": "image.png",
+      "src": "image_750w.png",
       "config_width": 750,
       "config_height": 500
     },
     {
-      "src": "https://scontent-lht6-1.cdninstagram.com/vp/96610c5d1b5647da1e12f4f076e90ee7/5C868BE4/t51.2885-15/e35/43209300_193808991532182_4392627673419220297_n.jpg",
+      "src": "image_1080w.png",
       "config_width": 1080,
       "config_height": 720
     }

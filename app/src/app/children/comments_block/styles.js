@@ -1,7 +1,7 @@
 export default {
   commentList: {
     overflow: 'auto',
-    height: '50vh'
+    flex: '1 0 50vh'
   },
   commentContainer: {
     display: 'flex'

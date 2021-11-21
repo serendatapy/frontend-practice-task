@@ -11,13 +11,13 @@ const CommentsBlock = (props) => {
       <Comment key={data.id} username={data.owner.username} userComment={getCaptionFromEdges(data.edge_media_to_caption)} />
       {data.edge_media_to_comment.edges.map(comment => {
         return (
-          <div style={styles.commentContainer}>
-          <div style={styles.comment}>
-            <Comment  key={comment.node.id} username={comment.node.owner.username} userComment={comment.node.text} />
-          </div>
-          <div style={styles.likeComment}>
-            <LikeButton size={"small"} style={styles.likeComment}/>
-          </div>
+          <div style={styles.commentContainer} key={comment.node.id}>
+            <div style={styles.comment}>
+              <Comment username={comment.node.owner.username} userComment={comment.node.text} />
+            </div>
+            <div style={styles.likeComment}>
+              <LikeButton size={"small"} style={styles.likeComment} />
+            </div>
           </div>
         )
       })}

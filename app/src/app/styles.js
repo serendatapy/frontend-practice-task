@@ -19,17 +19,19 @@ export default {
   image: {
     order: '1',
     flex: '1 0 60%',
-    alignSelf: 'flex-start',
+    alignSelf: 'stretch',
     boxSizing: 'border-box',
     backgroundColor: '#fafafa',
-    padding: '20px 0px 5px 0px'
+    display: 'flex'
   },
 
   text: {
     order: '2',
     flex: '1 0 40%',
-    alignSelf: 'flex-start',
+    alignSelf: 'stretch',
     boxSizing: 'border-box',
-    padding: '20px 0px 5px 20px'
+    padding: '20px 0px 0px 20px',
+    display: 'flex',
+    flexFlow: 'column'
   }
 }
