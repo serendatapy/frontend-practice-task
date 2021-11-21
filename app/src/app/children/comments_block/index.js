@@ -4,12 +4,15 @@ import Comment from './children/comment/index'
 import { getCaptionFromEdges } from './helpers'
 import LikeButton from '../like_button/index'
 
-const CommentsBlock = (props) => {
-  const { data } = props
+/**
+ * Here we might need to introduce a virtualization library to deal with having lots of posts
+ */
+
+const CommentsBlock = ({mediaComments,owner,imageCaption}) => {
   return (
     <div style={styles.commentList}>
-      <Comment key={data.id} username={data.owner.username} userComment={getCaptionFromEdges(data.edge_media_to_caption)} />
-      {data.edge_media_to_comment.edges.map(comment => {
+      <Comment username={owner.username} userComment={getCaptionFromEdges(imageCaption)} />
+      {mediaComments.map(comment => {
         return (
           <div style={styles.commentContainer} key={comment.node.id}>
             <div style={styles.comment}>

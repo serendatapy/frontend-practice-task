@@ -1,6 +1,7 @@
 export default {
   userblock: {
     display: 'flex',
+    flex: '0 1 0',
     paddingBottom: '10px',
     borderBottom: '1px solid #eeeeef',
   },

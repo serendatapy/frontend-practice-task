@@ -5,7 +5,7 @@ import UnlikedIcon from './children/unliked_icon'
 const LikeButton = ({ size, like }) => {
   const [liked, setLiked] = useState(like)
   return (
-    <div onClick={() => setLiked(!liked)}>
+    <div onClick={() => setLiked(!liked)} onKeyDown={(e) => e.keyCode === 13? setLiked(!liked):''}>
       {
         liked ? <LikedIcon size={size}/> : <UnlikedIcon size={size}/>
       }

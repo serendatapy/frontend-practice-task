@@ -5,7 +5,9 @@ export default {
     borderBottomRightRadius: '3px',
     borderTopRightRadius: '3px',
     maxWidth: '935px',
-    margin: '16px auto',
+    maxHeight: '750px',
+    height: '100vh',
+    margin: '0px auto',
     width: 'calc(100% - 40px)',
 
     display: 'flex',

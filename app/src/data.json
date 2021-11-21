@@ -11,17 +11,17 @@
   "display_url": "image.png",
   "display_resources": [
     {
-      "src": "image_640w.png",
+      "src": "image_640w.webp",
       "config_width": 640,
       "config_height": 426
     },
     {
-      "src": "image_750w.png",
+      "src": "image_750w.webp",
       "config_width": 750,
       "config_height": 500
     },
     {
-      "src": "image_1080w.png",
+      "src": "image_1080w.webp",
       "config_width": 1080,
       "config_height": 720
     }
