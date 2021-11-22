@@ -26,10 +26,10 @@ const App = (props) => {
   });
 
   /**
-   * Here we might use react helment to deal with a more complex use case
+   * Here we might use react helment to deal with a more complex use cases
+   * of routing and meta tags
    */
   useEffect(() => {
-    // Update the document title using the browser API
     document.title = `Student Beans message wall`;
     let el = document.querySelector("meta[name='description']")
     el.setAttribute('content', 'comments on the post made by the user')
